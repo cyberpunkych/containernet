@@ -88,7 +88,7 @@ Start example topology with some empty Docker containers connected to the networ
 
 Build:
 
-`docker build -t containernetwifi`
+`docker build . -t containernetwifi`
 
 And run example:
 
