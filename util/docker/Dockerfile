@@ -1,11 +1,13 @@
 FROM ubuntu:xenial
-
+ENV LANG C.UTF-8
+ENV LC_ALL C.UTF-8
 # install required packages
 RUN apt-get clean
 RUN apt-get update \
     && apt-get install -y  git \
     net-tools \
     aptitude \
+    libffi-dev \
     build-essential \
     python3-setuptools \
     python3-dev \
