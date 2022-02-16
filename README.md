@@ -84,6 +84,20 @@ Start example topology with some empty Docker containers connected to the networ
 * run: `sudo python examples/containernet_example.py`
 * use: `containernet> d1 ifconfig` to see config of container `d1`
 
+### Docker
+
+Build:
+
+`docker build -t containernetwifi`
+
+And run example:
+
+`docker run --rm --name containernet-wifi -it --privileged --pid=host -v /var/run/docker.sock:/var/run/docker.sock -v /sys:/sys -v /lib/modules:/lib/modules --network=host containernetwifi examples/containernet_wifi.py`
+
+or bash:
+
+`docker run --rm --name containernet-wifi -it --privileged --pid=host -v /var/run/docker.sock:/var/run/docker.sock -v /sys:/sys -v /lib/modules:/lib/modules --network=host containernetwifi /bin/bash`
+
 ### Topology example
 
 In your custom topology script you can add Docker hosts as follows:
